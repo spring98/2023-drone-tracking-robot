@@ -61,6 +61,7 @@ $$\theta_2 = \arccos\left(L_2 A + \sqrt{(L_2 A)^2 + (A^2 + B)(B - L_2^2)}\right)
 
 $$where, \quad A = z - L_1, \quad B = x^2 + y^2, \quad L_1 = d_1 + a_2, \quad L_2 = a_3$$
 
+## Trajectory
 
 ## Dynamics
 
