@@ -54,10 +54,11 @@ https://github.com/spring98/drone-tracking-robot/assets/92755385/92e1d344-143c-4
 
 ## Kinematics
 <p align="center">  
-  <img src="https://github.com/spring98/drone-tracking-robot/assets/92755385/89d0baaa-1565-4af4-9b76-d77b52ffc5ca" align="center" width="30%">
+  <img src="https://github.com/spring98/drone-tracking-robot/assets/92755385/b4e4af97-9759-496a-94bf-f8377e7e92ec" align="center" width="30%">
 </p>
 
 아래부터 순서대로 { ${base}$ }, { ${1}$ }, { ${2}$ }, { ${tool}$ } 의 local coordinate 이며 빨간축이 $x$축, 초록축이 $y$축, 파란축이 $z$축 이다.
+<br/><br/>
 
 ### DH Parameter
 | $$i$$  | $$\alpha_{i-1}$$ | $$a_{i-1}$$ | $$d_i$$ | $$\theta_i$$ |
@@ -67,26 +68,44 @@ https://github.com/spring98/drone-tracking-robot/assets/92755385/92e1d344-143c-4
 |$$Tool (Laser)$$|$$\pi/2$$|$$a_3$$|$$0$$|$$\pi/2$$|
 
 DH Parameter 는 위의 표와 같다.
+<br/><br/>
 
 ### Forward Kinematics
-$${}_{O}^{Laser} T = \begin{bmatrix}
+{ ${base}$ } 계에서 { ${tool}$ } 계를 표현하고자 할 때 
+
+DH Parameter 표를 이용해서 $i = 1$ 부터 $tool$ 까지 곱으로 표현할 수 있으며 아래 식과 같다.
+
+<br/>
+
+$${}_{base}^{tool} T = \begin{bmatrix}
 \sin \theta_1 & \sin \theta_2 \cos \theta_1 & \cos \theta_1 \cos \theta_2 & -a_3 \sin \theta_2 \cos \theta_1 \\
 -\cos \theta_1 & \sin \theta_1 \sin \theta_2 & \sin \theta_1 \cos \theta_2 & -a_3 \sin \theta_1 \sin \theta_2 \\
 0 & -\cos \theta_2 & \sin \theta_2 & a_2 + a_3 \cos \theta_2 + d_1 \\
 0 & 0 & 0 & 1
 \end{bmatrix}$$
 
+
+<br/><br/>
+
 ### Inverse Kinematics
 <p align="center">  
   <img src="https://github.com/spring98/drone-tracking-robot/assets/92755385/4d263b5d-cde5-444e-a2ae-311e66163468" align="center" width="50%">
 </p>
 
+<br/>
+
+드론의 위치를 $x, y, z$ 라고 할 때, $\theta_1$ 과 $\theta_2$ 는 아래와 같이 기하학적인 방식으로 유도할 수 있다.
+
+<br/>
 
 $$\theta_1 = \arctan\left(\frac{y}{x}\right)$$
 
 $$\theta_2 = \arccos\left(L_2 A + \sqrt{(L_2 A)^2 + (A^2 + B)(B - L_2^2)}\right)$$
 
 $$where, \quad A = z - L_1, \quad B = x^2 + y^2, \quad L_1 = d_1 + a_2, \quad L_2 = a_3$$
+
+
+<br/><br/>
 
 ## Trajectory
 
