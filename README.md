@@ -25,7 +25,7 @@ https://github.com/spring98/drone-tracking-robot/assets/92755385/92e1d344-143c-4
 링크 질량
 |   | $$m_1$$ | $$m_2$$ |
 |---|---|---|
-|$$Mass (kg)$$|$$3$$|$$3$$|
+|$$Mass (kg)$$|$$0.075$$|$$0.316$$|
 
 ## Kinematics
 <p align="center">  
@@ -51,7 +51,7 @@ $${}_{O}^{Laser} T = \begin{bmatrix}
 
 ### Inverse Kinematics
 <p align="center">  
-  <img src="https://github.com/spring98/drone-tracking-robot/assets/92755385/4d263b5d-cde5-444e-a2ae-311e66163468" align="center" width="70%">
+  <img src="https://github.com/spring98/drone-tracking-robot/assets/92755385/4d263b5d-cde5-444e-a2ae-311e66163468" align="center" width="50%">
 </p>
 
 
@@ -64,6 +64,10 @@ $$where, \quad A = z - L_1, \quad B = x^2 + y^2, \quad L_1 = d_1 + a_2, \quad L_
 ## Trajectory
 
 ## Dynamics
+<p align="center">
+  <img src="https://github.com/spring98/drone-tracking-robot/assets/92755385/59052504-5f18-490c-b873-6064c58fadaf" align="center" width="35%">  
+</p>
+
 
 $$ E_p = m_1 g l_1 + m_2 g ( l_1 + l_2 \cos \theta_2 + l_3 \sin \theta_2 ) $$
 
