@@ -28,9 +28,11 @@ https://github.com/spring98/drone-tracking-robot/assets/92755385/92e1d344-143c-4
 |$$Mass (kg)$$|$$3$$|$$3$$|
 
 ## Kinematics
-<img width="481" alt="스크린샷 2024-05-15 11 29 07" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/89d0baaa-1565-4af4-9b76-d77b52ffc5ca">
-
-<img width="705" alt="스크린샷 2024-05-15 11 23 34" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/ec3595ac-1477-459f-91f5-ccdbcf1c3945">
+<p align="center">  
+  <img src="https://github.com/spring98/drone-tracking-robot/assets/92755385/89d0baaa-1565-4af4-9b76-d77b52ffc5ca" align="center" width="30%">
+  <img width="5%">
+  <img src="https://github.com/spring98/drone-tracking-robot/assets/92755385/ec3595ac-1477-459f-91f5-ccdbcf1c3945" align="center" width="50%">  
+</p>
 
 ### DH Parameter
 | $$i$$  | $$\alpha_{i-1}$$ | $$a_{i-1}$$ | $$d_i$$ | $$\theta_i$$ |
@@ -48,7 +50,9 @@ $${}_{O}^{Laser} T = \begin{bmatrix}
 \end{bmatrix}$$
 
 ### Inverse Kinematics
-![드론 추적 기하학](https://github.com/spring98/drone-tracking-robot/assets/92755385/4d263b5d-cde5-444e-a2ae-311e66163468)
+<p align="center">  
+  <img src="https://github.com/spring98/drone-tracking-robot/assets/92755385/4d263b5d-cde5-444e-a2ae-311e66163468" align="center" width="70%">
+</p>
 
 
 $$\theta_1 = \arctan\left(\frac{y}{x}\right)$$
@@ -101,8 +105,12 @@ m_2 A^2 & 0 \\
 $$ where, \quad A = l_2 \sin \theta_2 - l_3 \cos \theta_2 \quad \text{and} \quad B = l_2 \cos \theta_2 + l_3 \sin \theta_2 $$
 
 
-
 ## Control
+### PID Design
+![PID 블록선도 drawio](https://github.com/spring98/drone-tracking-robot/assets/92755385/3de4c052-973d-4ff3-891e-c789fb44c17b)
+
+### SMC Design
+![SMC블록선도 drawio](https://github.com/spring98/drone-tracking-robot/assets/92755385/bcb763d6-7b74-499a-868d-ad8812b96a05)
 
 ## Result
 
