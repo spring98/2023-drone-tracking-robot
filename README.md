@@ -17,11 +17,27 @@ https://github.com/spring98/drone-tracking-robot/assets/92755385/92e1d344-143c-4
 ## Specification
 <img width="720" alt="스크린샷 2024-05-15 11 29 32" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/a069562a-7fc3-40f0-b46e-a51008345307">
 
+링크 길이
+|   | $$d_1$$ | $$a_2$$ | $$a_3$$ | $$a_3'$$|
+|---|---|---|---|---|
+|$$Length (m)$$|$$0.07$$|$$0.03$$|$$0.055$$|$$0.085$$|
+
+링크 질량
+|   | $$m_1$$ | $$m_2$$ |
+|---|---|---|
+|$$Mass (kg)$$|$$3$$|$$3$$|
+
 ## Kinematics
 <img width="481" alt="스크린샷 2024-05-15 11 29 07" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/89d0baaa-1565-4af4-9b76-d77b52ffc5ca">
 
 <img width="705" alt="스크린샷 2024-05-15 11 23 34" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/ec3595ac-1477-459f-91f5-ccdbcf1c3945">
 
+DH Parameter
+| $$i$$  | $$\alpha(i-1)$$ | $$a(i-1)$$ | $$d(i)$$ | $$\theta(i)$$ |
+|---|---|---|---|---|
+|$$1$$|$$0$$|$$0$$|$$d_1 + a_2$$|$$\theta_1$$|
+|$$2$$|$$\pi/2$$|$$0$$|$$0$$|$$\theta_2 + \pi/2$$|
+|$$Tool (Laser)$$|$$\pi/2$$|$$a_3$$|$$0$$|$$\pi/2$$|
 
 ## Dynamics
 
@@ -29,9 +45,7 @@ https://github.com/spring98/drone-tracking-robot/assets/92755385/92e1d344-143c-4
 
 ## Result
 
-
-
-$$\begin{bmatrix}
+$${}_{O}^{Laser} T = \begin{bmatrix}
 \sin \theta_1 & \sin \theta_2 \cos \theta_1 & \cos \theta_1 \cos \theta_2 & -a_3 \sin \theta_2 \cos \theta_1 \\
 -\cos \theta_1 & \sin \theta_1 \sin \theta_2 & \sin \theta_1 \cos \theta_2 & -a_3 \sin \theta_1 \sin \theta_2 \\
 0 & -\cos \theta_2 & \sin \theta_2 & a_2 + a_3 \cos \theta_2 + d_1 \\
@@ -39,4 +53,4 @@ $$\begin{bmatrix}
 \end{bmatrix}$$
 
 
-$$\sum_{i=1}^{10} t_i$$
+
