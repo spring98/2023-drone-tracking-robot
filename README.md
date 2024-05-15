@@ -20,20 +20,44 @@ https://github.com/spring98/drone-tracking-robot/assets/92755385/92e1d344-143c-4
   <img src="https://github.com/spring98/drone-tracking-robot/assets/92755385/a069562a-7fc3-40f0-b46e-a51008345307" align="center" width="50%">  
 </p>
 
-링크 길이
-|   | $$d_1$$ | $$a_2$$ | $$a_3$$ | $$a_3'$$|
-|---|---|---|---|---|
-|$$Length (m)$$|$$0.07$$|$$0.03$$|$$0.055$$|$$0.085$$|
+ <table>
+    <caption>Link Length</caption>
+    <tr>
+      <th></th>
+      <th>$$d_1$$</th>
+      <th>$$a_2$$</th>
+      <th>$$a_3$$</th>
+      <th>$$a_3'$$</th>
+    </tr>
+    <tr>
+      <td>$$Length (m)$$</td>
+      <td>$$0.07$$</td>
+      <td>$$0.03$$</td>
+      <td>$$0.055$$</td>
+      <td>$$0.085$$</td>
+    </tr>
+  </table>
 
-링크 질량
-|   | $$m_1$$ | $$m_2$$ |
-|---|---|---|
-|$$Mass (kg)$$|$$0.075$$|$$0.316$$|
+<table>
+    <caption>Link Mass</caption>
+    <tr>
+      <th></th>
+      <th>$$m_1$$</th>
+      <th>$$m_2$$</th>
+    </tr>
+    <tr>
+      <td>$$Mass (kg)$$</td>
+      <td>$$0.075$$</td>
+      <td>$$0.316$$</td>
+    </tr>
+  </table>
 
 ## Kinematics
 <p align="center">  
   <img src="https://github.com/spring98/drone-tracking-robot/assets/92755385/89d0baaa-1565-4af4-9b76-d77b52ffc5ca" align="center" width="30%">
 </p>
+
+아래부터 순서대로 { ${base}$ }, { ${1}$ }, { ${2}$ }, { ${tool}$ } 의 local coordinate 이며 빨간축이 $x$축, 초록축이 $y$축, 파란축이 $z$축 이다.
 
 ### DH Parameter
 | $$i$$  | $$\alpha_{i-1}$$ | $$a_{i-1}$$ | $$d_i$$ | $$\theta_i$$ |
@@ -41,6 +65,8 @@ https://github.com/spring98/drone-tracking-robot/assets/92755385/92e1d344-143c-4
 |$$1$$|$$0$$|$$0$$|$$d_1 + a_2$$|$$\theta_1$$|
 |$$2$$|$$\pi/2$$|$$0$$|$$0$$|$$\theta_2 + \pi/2$$|
 |$$Tool (Laser)$$|$$\pi/2$$|$$a_3$$|$$0$$|$$\pi/2$$|
+
+DH Parameter 는 위의 표와 같다.
 
 ### Forward Kinematics
 $${}_{O}^{Laser} T = \begin{bmatrix}
