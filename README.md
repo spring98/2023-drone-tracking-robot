@@ -210,37 +210,19 @@ $$ e_4 = \dot{\theta}_{d2} - \dot{\theta}_2 $$
 
 ## Result
 <p align="center">
-  <img width="564" alt="스크린샷 2024-05-16 14 13 33" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/34d50b6a-f00f-44b5-80de-74db3eb5cc8e">
-
-</p>
-
-<img width="518" alt="스크린샷 2024-05-16 14 14 18" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/03392ddb-2492-48a9-b6a4-1197fe34247f">
-
----
-
-<p align="center">
   <img width="40%" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/fff4aea4-27ee-4e74-8d52-da3b52b72f5c">
-
-  <img width="40%" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/1b4b0041-9a5a-4779-aecc-c262a4d0bdac">
+  <img width="38%" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/1b4b0041-9a5a-4779-aecc-c262a4d0bdac">
 </p>
-
 
 <p align="center">
   <img width="40%" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/51ae24e8-69ea-4814-a3f5-b4595b866dfc">
-
-  
-  <img width="40%" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/9bb199f0-c4a2-44c8-9f38-fb36acd07d11">
+  <img width="38%" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/9bb199f0-c4a2-44c8-9f38-fb36acd07d11">
 </p>
-
 
 <p align="center">
-  <img src="https://github.com/spring98/drone-tracking-robot/assets/92755385/1547c6de-a242-4ba3-ba0c-1fa9d1fc932c">
-
-  
-  <img width="40%" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/ea3814b6-3ed4-4597-a27d-2becaff3a7c9">
+  <img width="40%" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/1547c6de-a242-4ba3-ba0c-1fa9d1fc932c">
+  <img width="38%" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/ea3814b6-3ed4-4597-a27d-2becaff3a7c9">
 </p>
----
-
 
 RMSE로 계산하였을 때 SMC가 XY Plane 0.809, YZ Plane 0.493으로 가장 적은 RMSE를 가져 다른 제어기보다더 좋은 추적성능을 보여주는 것을 확인할 수 있었습니다. 그러나 전력소모량이 가장 높은 것을 알 수 있습니다. 
 
