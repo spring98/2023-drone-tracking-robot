@@ -27,7 +27,7 @@ https://github.com/spring98/drone-tracking-robot/assets/92755385/92e1d344-143c-4
 
 5. inverse kinematics 를 통해 드론을 가리킬 수 있도록 각 관절이 이동해야할 각도를 구합니다.
 
-6. 5번에서 구한 각도로 이동하기 위한 Trajectory 를 구성합니다. (Trapezoidal Velocity Proflie)
+6. 5번에서 구한 각도로 이동하기 위한 Trajectory 를 구성합니다. (Trapezoidal Velocity Profili)
 
 7. 매니퓰레이터의 현재 각도, 각속도와 6번의 Trajectory 를 입력으로 폐루프 제어를 실행합니다.
 
@@ -133,10 +133,9 @@ $$where, \quad A = z - L_1, \quad B = x^2 + y^2, \quad L_1 = d_1 + a_2, \quad L_
   <img width="100%" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/3e89d484-b50a-4e07-ab5b-b600448b7adc">  
 </p>
 
-뎁스 카메라를 이용하여 새로운 드론을 탐지하면 해당 드론의 픽셀 좌표와 드론까지의 거리 정보를 얻을 수 있습니다. 
+두 지점을 이동할 때 안정적으로 제어하기 위해서 출발지점과 도착지점은 속도가 0 이 되도록 설계하는 것이 좋습니다.
 
-두 정보를 가지고 
-
+Trapezoidal Velocity Profile 방식으로 구현하였습니다.
 
 ## Dynamics
 <p align="center">
