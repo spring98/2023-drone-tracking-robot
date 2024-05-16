@@ -57,7 +57,7 @@ https://github.com/spring98/drone-tracking-robot/assets/92755385/92e1d344-143c-4
   <img src="https://github.com/spring98/drone-tracking-robot/assets/92755385/b4e4af97-9759-496a-94bf-f8377e7e92ec" align="center" width="30%">
 </p>
 
-아래부터 순서대로 { ${base}$ }, { ${1}$ }, { ${2}$ }, { ${tool}$ } 의 local coordinate 이며 빨간축이 $x$축, 초록축이 $y$축, 파란축이 $z$축 이다.
+아래부터 순서대로 { ${base}$ }, { ${1}$ }, { ${2}$ }, { ${tool}$ } 의 local coordinate 이며 빨간축이 $x$축, 초록축이 $y$축, 파란축이 $z$축 입니다.
 <br/><br/>
 
 ### DH Parameter
@@ -67,13 +67,13 @@ https://github.com/spring98/drone-tracking-robot/assets/92755385/92e1d344-143c-4
 |$$2$$|$$\pi/2$$|$$0$$|$$0$$|$$\theta_2 + \pi/2$$|
 |$$Tool (Laser)$$|$$\pi/2$$|$$a_3$$|$$0$$|$$\pi/2$$|
 
-DH Parameter 는 위의 표와 같다.
+DH Parameter 는 위의 표와 같습니다.
 <br/><br/>
 
 ### Forward Kinematics
 { ${base}$ } 계에서 { ${tool}$ } 계를 표현하고자 할 때 
 
-DH Parameter 표를 이용해서 $i = 1$ 부터 $tool$ 까지 곱으로 표현할 수 있으며 아래 식과 같다.
+DH Parameter 표를 이용해서 $i = 1$ 부터 $tool$ 까지 곱으로 표현할 수 있으며 아래 식과 같습니다.
 
 <br/>
 
@@ -94,7 +94,7 @@ $${}_{base}^{tool} T = \begin{bmatrix}
 
 <br/>
 
-드론의 위치를 $x, y, z$ 라고 할 때, $\theta_1$ 과 $\theta_2$ 는 아래와 같이 기하학적인 방식으로 유도할 수 있다.
+드론의 위치를 $x, y, z$ 라고 할 때, $\theta_1$ 과 $\theta_2$ 는 아래와 같이 기하학적인 방식으로 유도할 수 있습니다.
 
 <br/>
 
