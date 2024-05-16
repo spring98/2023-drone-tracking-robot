@@ -224,6 +224,10 @@ $$ e_4 = \dot{\theta}_{d2} - \dot{\theta}_2 $$
   <img width="38%" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/ea3814b6-3ed4-4597-a27d-2becaff3a7c9">
 </p>
 
+<p align="center">
+  <img width="80%" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/d07a708e-fde2-4759-ba6f-70b74db28027">
+</p>
+
 RMSE로 계산하였을 때 SMC가 XY Plane 0.809, YZ Plane 0.493으로 가장 적은 RMSE를 가져 다른 제어기보다더 좋은 추적성능을 보여주는 것을 확인할 수 있었습니다. 그러나 전력소모량이 가장 높은 것을 알 수 있습니다. 
 
 구간별 추적 성능으로 보았을 SMC는 경로에서 벗어나지 않으며 정확하게 추적하는 성능을 보이고 PID와 MPC 제어기에서는 경로에서 벗어나는 것을 보입니다. 
