@@ -167,6 +167,48 @@ $$ where, \quad A = l_2 \sin \theta_2 - l_3 \cos \theta_2 \quad \text{and} \quad
 ### PID Design
 ![PID 블록선도 drawio](https://github.com/spring98/drone-tracking-robot/assets/92755385/3de4c052-973d-4ff3-891e-c789fb44c17b)
 
+로봇의 PID제 어 시스템은 입력된 현재 각도와 각속도에 대한 정 보를 피드백 받고, 목표하는 각도와 각속도의 값을 비교하여 오차 값을 계산합니다. 
+
+오차 값은 적절한 이득 값들과 곱해져서 τ'(토크 수정 값)을 생성합니다. 이후, 현재 각도 정보는 질량 매트릭스를 통해 처 리되고, 이 결과는 τ' 와 곱해져 최종토크 τ 를 형성합니다. 
+
+차이를 에러 각(e)으로 두고, 폐루프 시스템의 특성을 이용하면 오차방정식을 구할 수 있습니다.
+
+
+$$ MV(t) = K_p e(t) + K_i \int_{0}^{t} e(t) \, dt + K_d \frac{de}{dt} $$
+
+
 ### SMC Design
 ![SMC블록선도 drawio](https://github.com/spring98/drone-tracking-robot/assets/92755385/bcb763d6-7b74-499a-868d-ad8812b96a05)
+
+상태공간좌표계에 상태값들이 0 으로 수렴하도록 설계된 슬라이딩표면을 따라가도록 불연속적인 제어입력을 가합니다.
+
+사용된 상태 공간좌표계는 모터의 참조값, 현재값의 차이 각도오차, 각속도 오차를 사용하고 있으며 제어기의 게인을 통해서 오차수렴속도, 채터링, 입력크기 등을 조절하는데 사용할 수 있습니다. 
+
+동역학 모델링으로부터 상태공간 방정식을 도출한 식은 아래와 같습니다.
+
+$$ \dot{x}_2 = -\frac{2B}{A} x_2 x_4 + \frac{1}{m_2 A^2} \tau_1 $$
+
+$$ \dot{x}_4 = \frac{AB}{C} x_2^2 + \frac{Ag}{C} + \frac{1}{m_2 C} \tau_2 $$ 
+
+
+$$ \quad C = l_2^2 + l_3^2 $$
+
+
+$$ x_1 = \theta_1, \quad x_2 = \dot{\theta}_1, \quad x_3 = \theta_2, \quad x_4 = \dot{\theta}_2 \tag{17} $$ 
+
+슬라이딩표면 설계는 아래와 같습니다.
+
+$$ s_1 = c_1 e_1 + e_2, \quad s_2 = c_2 e_3 + e_4  $$ 
+
+$$ \quad c_1 > 0, \quad c_2 > 0 $$ 
+
+<br/>
+
+$$ e_1 = \theta_{d1} - \theta_1 $$
+
+$$ e_2 = \dot{\theta}_{d1} - \dot{\theta}_1$$ 
+
+$$ e_3 = \theta_{d2} - \theta_2$$ 
+
+$$ e_4 = \dot{\theta}_{d2} - \dot{\theta}_2 $$ 
 
