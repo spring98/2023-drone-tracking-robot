@@ -124,7 +124,7 @@ $$ E_k = \frac{1}{2} m_2 \dot{\theta}_1^2 \left( l_3^2 \cos^2 \theta_2 + l_2^2 \
 
 <br/>
 
- 에너지의 차로 라그랑지안을 정의하고 라그랑주 방정식으로 운동방정식을 유도할 수 있습니다.
+ 운동에너지와 위치에너지의 차로 라그랑지안을 정의하고 라그랑주 방정식으로 운동방정식을 유도할 수 있습니다.
 
 <br/>
 
@@ -158,8 +158,6 @@ m_2 A^2 & 0 \\
 \tau_2
 \end{bmatrix} $$
 
-
-
 $$ where, \quad A = l_2 \sin \theta_2 - l_3 \cos \theta_2 \quad \text{and} \quad B = l_2 \cos \theta_2 + l_3 \sin \theta_2 $$
 
 
@@ -186,21 +184,19 @@ $$ MV(t) = K_p e(t) + K_i \int_{0}^{t} e(t) \, dt + K_d \frac{de}{dt} $$
 
 동역학 모델링으로부터 상태공간 방정식을 도출한 식은 아래와 같습니다.
 
+$$ x_1 = \theta_1, \quad x_2 = \dot{\theta}_1, \quad x_3 = \theta_2, \quad x_4 = \dot{\theta}_2 $$ 
+
 $$ \dot{x}_2 = -\frac{2B}{A} x_2 x_4 + \frac{1}{m_2 A^2} \tau_1 $$
 
 $$ \dot{x}_4 = \frac{AB}{C} x_2^2 + \frac{Ag}{C} + \frac{1}{m_2 C} \tau_2 $$ 
 
-
-$$ \quad C = l_2^2 + l_3^2 $$
-
-
-$$ x_1 = \theta_1, \quad x_2 = \dot{\theta}_1, \quad x_3 = \theta_2, \quad x_4 = \dot{\theta}_2 \tag{17} $$ 
+$$ where, \quad A = l_2 \sin \theta_2 - l_3 \cos \theta_2 \quad B = l_2 \cos \theta_2 + l_3 \sin \theta_2 \quad C = l_2^2 + l_3^2 $$
 
 슬라이딩표면 설계는 아래와 같습니다.
 
 $$ s_1 = c_1 e_1 + e_2, \quad s_2 = c_2 e_3 + e_4  $$ 
 
-$$ \quad c_1 > 0, \quad c_2 > 0 $$ 
+$$ where, \quad c_1 > 0, \quad c_2 > 0 $$ 
 
 <br/>
 
