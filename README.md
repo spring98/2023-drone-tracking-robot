@@ -15,6 +15,27 @@ https://github.com/spring98/drone-tracking-robot/assets/92755385/92e1d344-143c-4
 
 ## Scheme
 
+1. 뎁스카메라로 픽셀좌표와 드론까지의 거리 정보를 얻습니다.
+
+2. 카메라 캘리브레이션을 통해 카메라 내부 파라미터를 구합니다.
+
+3. 기구학적인 정보를 통해 원점과 카메라의 위치 및 회전 관계 (카메라 외부 파라미터) 를 구합니다.
+
+4. 아래와 같은 수식을 통해 드론의 3차원 좌표를 구합니다.
+
+<img width="533" alt="스크린샷 2024-05-17 02 01 44" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/cce4a497-7a50-4571-90f4-5cdb9c697f28">
+
+5. inverse kinematics 를 통해 드론을 가리킬 수 있도록 각 관절이 이동해야할 각도를 구합니다.
+
+6. 5번에서 구한 각도로 이동하기 위한 Trajectory 를 구성합니다. (Trapezoidal Velocity Proflie)
+
+7. 매니퓰레이터의 현재 각도, 각속도와 6번의 Trajectory 를 입력으로 폐루프 제어를 실행합니다.
+
+8. 뎁스카메라로 새로운 드론이 탐지되면 1번부터 다시 반복합니다.
+
+
+
+
 ## Specification
 <p align="center">
   <img src="https://github.com/spring98/drone-tracking-robot/assets/92755385/a069562a-7fc3-40f0-b46e-a51008345307" align="center" width="50%">  
@@ -108,6 +129,14 @@ $$where, \quad A = z - L_1, \quad B = x^2 + y^2, \quad L_1 = d_1 + a_2, \quad L_
 <br/><br/>
 
 ## Trajectory
+<p align="center">
+  <img width="100%" src="https://github.com/spring98/drone-tracking-robot/assets/92755385/3e89d484-b50a-4e07-ab5b-b600448b7adc">  
+</p>
+
+뎁스 카메라를 이용하여 새로운 드론을 탐지하면 해당 드론의 픽셀 좌표와 드론까지의 거리 정보를 얻을 수 있습니다. 
+
+두 정보를 가지고 
+
 
 ## Dynamics
 <p align="center">
