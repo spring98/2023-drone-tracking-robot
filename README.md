@@ -114,10 +114,17 @@ $$where, \quad A = z - L_1, \quad B = x^2 + y^2, \quad L_1 = d_1 + a_2, \quad L_
   <img src="https://github.com/spring98/drone-tracking-robot/assets/92755385/59052504-5f18-490c-b873-6064c58fadaf" align="center" width="35%">  
 </p>
 
+빨간점을 각각의 질점으로 가정하여 위치에너지, 운동에너지를 구할 수 있습니다.
+
+<br/>
 
 $$ E_p = m_1 g l_1 + m_2 g ( l_1 + l_2 \cos \theta_2 + l_3 \sin \theta_2 ) $$
 
 $$ E_k = \frac{1}{2} m_2 \dot{\theta}_1^2 \left( l_3^2 \cos^2 \theta_2 + l_2^2 \sin^2 \theta_2 - 2 l_2 l_3 \cos \theta_2 \sin \theta_2 \right) + \frac{1}{2} m_2 \dot{\theta}_2^2 \left( l_2^2 + l_3^2 \right) $$
+
+<br/>
+
+ 에너지의 차로 라그랑지안을 정의하고 라그랑주 방정식으로 운동방정식을 유도할 수 있습니다.
 
 <br/>
 
@@ -162,9 +169,4 @@ $$ where, \quad A = l_2 \sin \theta_2 - l_3 \cos \theta_2 \quad \text{and} \quad
 
 ### SMC Design
 ![SMC블록선도 drawio](https://github.com/spring98/drone-tracking-robot/assets/92755385/bcb763d6-7b74-499a-868d-ad8812b96a05)
-
-## Result
-
-
-
 
